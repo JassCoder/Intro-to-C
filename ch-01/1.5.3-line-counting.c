@@ -2,16 +2,19 @@
 
 int	main(void)
 {
-	int	c,nl;
+	int	c;
+	int	nl;
 
 	nl = 0;
-	while ((c = getchar()) != EOF)
+	c = getchar();
+	while (c != EOF)
 	{
-		if( c == '\n')
+		if (c == '\n')
 		{
 			++nl;
 		}
-		printf("%d \n", nl);
+		c = getchar();
 	}
+	printf("new lines : %d \n", nl);
 	return (0);
 }
